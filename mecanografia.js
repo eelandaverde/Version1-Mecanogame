@@ -258,7 +258,7 @@ case 7:
     
 break;
 default:
-    (contador>6) ? contador=6:contador=contador;
+    (contador>7) ? contador=7:contador=contador;
 break;
 }
 
