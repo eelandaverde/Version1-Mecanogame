@@ -233,7 +233,7 @@ case 7:
     contadorPadre.style.borderColor = "";
     //modo manual o automatico
    if(btonPause === true && contadorPorPagina === 1 ){
-    setTimeout(function(){intencion = prompt("Presione 1 Si desea programar el nivel a comenzar/continuar <br> o presione cualquier otra tecla, incluso ninguna si desea continuar en automatico");
+    setTimeout(function(){intencion = prompt("Presione 1 Si desea programar el nivel a comenzar/continuar Ó presione cualquier otra tecla, incluso ninguna si desea continuar en automatico");
         while(intencion == 1){
               try
             {
@@ -248,7 +248,7 @@ case 7:
                 console.clear();
                 console.error(err);
             }
-        }},500);}
+        }},100);}
         
         //fin modo manual y automatico
  //varios
