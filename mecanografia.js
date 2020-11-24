@@ -87,7 +87,7 @@ let incremento = 0;
 let caracter;
 let porcentajeAcierto;
 let levelDeseado = 1;
-let intencion;
+let juegoDirecto = 0;
 //pagina1
 //pagina2
     descripcion1.addEventListener("click",()=>{
@@ -555,7 +555,8 @@ start.addEventListener("click" , () => {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                SEGUNDA PARTE
 ////////////////////////////////////////////////////////////////////////////////////////////////////////7///
-descripcion2.addEventListener("click", function(){contador = 7; menu(contador)}); 
+descripcion2.addEventListener("click", function(){juegoDirecto ++; menu(contador)}); 
+if(juegoDirecto > 0){ contador = 7; menu(contador); juegoDirecto = 0;}
 
 
     
