@@ -1,0 +1,494 @@
+*
+{
+   color:white; 
+   margin: 0;
+   padding:0;
+   box-sizing: border-box;
+   font-family:'Open Sans';
+
+}
+body
+{
+    background-color: black;    
+}
+#cajaprincipal1
+{
+  display: flex ;  
+  height:625px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 3;
+}
+
+  .cajaA
+  {  
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .cajaA
+  {
+      flex-wrap: wrap;
+      height: 400px;
+  }
+  
+     .contenedor
+     {
+    margin-top:40px ;
+    width: 45%;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    text-align: center;
+     }
+     h1
+     {
+    text-align: center;
+     }
+     #imagen1 
+     {
+        background-image: url("Diseño/aprende.png");
+     }
+     #imagen2
+     {
+          background-image: url("Diseño/teclado.png");
+     }
+     #imagen1,#imagen2,#imagen1 img, #img2 img
+     {
+    width: 80%;
+    height:200px;
+    border:3px solid white;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+     }
+       /*efecto hover*/
+        .contenedor:hover .descripcion
+        {
+            transition: 1s;
+            transform: translateY(0px);
+            z-index: 1;
+        } 
+        .contenedor:hover #imagen1 img, .contenedor:hover #imagen2 img
+        {
+            display:flex;
+        }
+        /*Fin hover*/
+        #h3seccion1
+     {
+    color:blue;
+     }
+     #h3seccion2
+     {
+    color:yellow;
+     }
+     .descripcion
+     {
+    width: 80%;
+    height:200px;
+    text-align: center;
+    /*display:flex;
+    flex-direction:row;
+    align-content: center;
+    */font-size:22px;
+    transform:translateY(-225px);
+    z-index: -1;
+    }
+    .descripcion a
+    {
+        text-decoration: none; 
+    }
+          #descripcion1
+          {
+         background-color: #0984e3;
+         border: 5px solid #ff3f34;
+          }
+          #descripcion2
+          {
+         background-color: #ff3f34;
+         border:5px solid #0984e3;
+     }
+/*Segunda pagina*/
+.tema
+{
+  text-align: center;
+}
+.direccionDerecha img,.direccionIzquierda img
+{
+  filter:invert(100%) !important;
+}
+#cajaprincipal2 
+{
+display:none; 
+padding:4px; 
+height: max-content; 
+flex-direction: column;
+justify-content: center;
+height:700px;
+}
+/*Resultados del juego*/
+/*.resultados
+{
+  top:-40px;
+  left:0;
+  position:absolute;
+  width: 100%;
+  z-index: 1;
+  height: 300px;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: space-between;
+}*/
+/*primer rectangulo*/
+#contadorPadre
+{
+  background: white;
+  border:3px solid #0f0; 
+  width: 100%;
+  height:100px;
+  display: none;
+  flex-direction:row;
+  position: relative;
+  top:0px;
+}
+
+.contador
+{
+  width: 33.33%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.paragraph,.puntaje
+{
+  width:100%;
+  height:50px;
+  text-align: center;
+  color:black;
+  /*border:3px solid #000;*/
+  font-weight: bold;
+}
+/*Segundo rectangulo*/
+#rfinal
+{
+  display: none;
+  position: relative;
+  top:20%;
+  margin:auto;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: white;
+  border:3px solid #0f0; 
+  width:60%;
+  height:100px;
+  z-index: 1;
+}
+.botones
+{
+  width: 100%;
+  height:50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.botones button{color:black;font-weight: bold;}
+        /*Fin del juego*/
+.tema
+{
+color:red; text-align:center; font-weight: 900; margin-bottom: 20px;  width: 100%;
+display: flex; flex-direction: row; vertical-align: center;
+}
+#indicaciones
+{
+  width: 60%;
+  text-align: center;
+  margin:auto;
+  display: none;
+}
+
+.teclado
+{
+    margin:10px auto;
+    width: 95%;
+    height:250px;
+    display:grid;
+    grid-gap:10px;
+    grid-template-columns: repeat(30,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas: "grado grado uno uno dos dos tres tres cuatro cuatro cinco cinco seis seis siete siete ocho ocho nueve nuve interrogacionAbajo interrogacionAbajo interrogacionAbierto interrogacionAbierto borrar borrar borrar borrar borrar borrar "
+                          "tab tab tab tab q q w w e e r r t t y y u u i i o o p p tilde tilde asterisco asterisco corcheteCerrado corcheteCerrado"
+                         "BLOQMAYUS BLOQMAYUS BLOQMAYUS BLOQMAYUS BLOQMAYUS a a s s d d f f g g h h j j k k l l ñ ñ corcheteAbierto corcheteAbierto enter enter enter"
+                         "shift shift shift shift shift shift z z x x c c v v b b n n m m coma coma punto punto guion guion shiftDos shiftDos shiftDos shiftDos"     
+                         "control control control control inicio inicio inicio inicio alt alt alt espacio espacio espacio espacio espacio espacio espacio espacio espacio espacio espacio altgr altgr altgr altgr mayorMenor izquierda arriba-abajo derecha"; 
+}
+
+#grado{grid-area:"grado";          grid-column: 1/3;}
+#uno{grid-area:"uno";              grid-column:  3/5;}
+#dos{grid-area:"dos";              grid-column:  5/7;}
+#tres{grid-area:"tres";            grid-column:7/9 ;}
+#cuatro{grid-area:"cuatro";        grid-column: 9/11;}
+#cinco{grid-area:"cinco";          grid-column: 11/13;}
+#seis{grid-area:"seis";grid-column: 13/15;}
+#siete{grid-area:"siete";grid-column:15/17;}
+#ocho{grid-area:"ocho"; grid-column: 17/19;}
+#nueve{grid-area:"nueve"; grid-column: 19/21;}
+#cero{grid-area:"cero";grid-column: 21/23;}
+#interrogacionAbajo{grid-area:"interrogacionAbajo"; grid-column: 23/25;}
+#interrogacionAbierto{grid-area:"interrogacionAbierto"; grid-column: 25/27;}
+#borrar{grid-area:"borrar"; grid-column:27/31;grid-row:1/1;}
+
+#tab{grid-area:"tab";grid-column: 1/4;}
+#q{grid-area:"q"; grid-column: 4/6;} 
+#w{grid-area:"w"; grid-column: 6/8;}
+#e{grid-area:"e"; grid-column: 8/10;}
+#r{grid-area:"r"; grid-column: 10/12;}
+#t{grid-area:"t"; grid-column: 12/14;}
+#y{grid-area:"y"; grid-column: 14/16;}
+#u{grid-area:"u"; grid-column: 16/18;}
+#i{grid-area:"i"; grid-column: 18/20;}
+#o{grid-area:"o"; grid-column: 20/22;}
+#p{grid-area:"p"; grid-column: 22/24;}
+#tilde{grid-area:"tilde";grid-column:24/26;}
+#asterisco{grid-area:"asterisco";grid-column:26/28;}
+#corcheteCerrado{grid-area:"corcheteCerrado";grid-column:28/31;}
+
+#BLOQMAYUS{grid-area:"BLOQMAYUS"; grid-column:1/5;}
+#a{grid-area:"a";grid-column:5/7;}
+#s{grid-area:"s";grid-column:7/9 ;}
+#d{grid-area:"d";grid-column:9/11 ;}
+#f{grid-area:"f";grid-column:11/13 ;}
+#g{grid-area:"g";grid-column:13/15 ;}
+#h{grid-area:"h";grid-column:15/17 ;}
+#j{grid-area:"j";grid-column:17/19 ;}
+#k{grid-area:"k";grid-column:19/21 ;}
+#l{grid-area:"l";grid-column:21/23 ;}
+#ñ{grid-area:"ñ";grid-column:23/25 ;}
+#corcheteAbierto{grid-area:"corcheteAbierto"; grid-column:25/27;}
+#enter{grid-area:"enter"; grid-column: 27/31;}
+
+#shift{grid-area:"shift"; grid-column:1/6;}
+#z{grid-area:"z";grid-column:6/8;}
+#x{grid-area:"x";grid-column:8/10;}
+#c{grid-area:"c";grid-column:10/12;}
+#v{grid-area:"v";grid-column:12/14;}
+#b{grid-area:"b";grid-column:14/16;}
+#n{grid-area:"n";grid-column:16/18;}
+#m{grid-area:"m";grid-column:18/20;}
+#coma{grid-area:"coma";grid-column:20/22;}
+#punto{grid-area:"punto";grid-column:22/24;}
+#guion{grid-area:"guion";grid-column:24/26;}
+#shiftDos{grid-area:"shiftDos";grid-column: 26/31;}
+
+#control{grid-area:"control"; grid-column: 1/5;}
+#inicio{grid-area:"inicio";grid-column:5/8;}
+#alt{grid-area:"alt";grid-column:8/11;}
+#espacio{grid-area:"espacio";grid-column:11/21;}
+#altgr{grid-area:"altgr";grid-column:21/23;}
+#mayorMenor{grid-area:"mayorMenor";grid-column:23/25;}
+#izquierda{grid-area:"izquierda";grid-column:25/27;}
+#arriba-abajo{grid-area:"arriba-abajo";grid-column:27/29;display:grid; grid-template-rows: repeat(2,1fr); grid-template-columns:1fr;grid-template-areas: "arriba"
+                                                                                                                                                         "abajo" ;}
+
+    #arriba{grid-area:"arriba"; text-align:center;}                                                                                                                                                         #derecha{grid-area:"derecha";grid-column:29/31;}
+    #abajo{grid-area:"abajo";text-align: center;}
+
+button.teclas{ background-color: #000; font-size:15px; font-weight: 900;}
+button:hover{border:3px solid white;}
+
+.direccion
+{
+width: 100%;
+height: 100px;
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+#start
+{
+  width: 10%;
+  height:40px;
+  vertical-align: center;
+  font-weight: 900;
+  border-radius: 40px;
+  color:black;
+}
+
+/*Manos. Posicion inicial*/
+#posicionMano {
+    height: 275px;
+    background: #000;
+    font-family: sans-serif;
+    display: flex;
+    position: relative;
+    z-index: -4;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .mano {
+    display: flex;
+    flex-direction: column;
+    width: 21%;
+    height: 250px;
+  }
+  #dedos {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: 50%;
+  }
+  .dedos {
+    width: 15%;
+    border: 2px solid #f00;
+    background: #ffebaa;
+    position: relative;
+    border-radius: 20px 20px 0px 0px;
+  }
+  #pulgar,
+  #pulgar2 {
+    width: 18%;
+    height: 80%;
+    z-index: -1;
+    border-radius: 40px;
+  }
+  #pulgar {
+    transform: rotate(60deg);
+    left: 70px;
+  }
+  #pulgar2 {
+    transform: rotate(-60deg);
+    right: 70px;
+  }
+  #indice,
+  #indice2 {
+    height: 90%;
+  }
+  #medio,
+  #medio2 {
+    height: 100%;
+  }
+  #anular,
+  #anular2 {
+    height: 95%;
+  }
+  #meñique,
+  #meñique2 {
+    height: 80%;
+  }
+  #palma,
+  #palma2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    background-color: #ffebaa;
+    border-radius: 20px;
+    border-color: #f00;
+    border-style: solid;
+  }
+  #palma {
+    justify-content: flex-end;
+  }
+  .direccion{width: 100%; height:60px;}
+  .direccionDerecha,.direccionIzquierda
+  {
+    width:60px;height:60px; background-color: black; align-self: center;
+  }
+  #trainer a {text-decoration: none; }
+  #trainer{display:none;text-align: center;}
+  
+  /*Tercera pagina*/
+  #cajaprincipal3
+  {
+    width: 100%;
+    height: 600px;
+    display:none;
+    flex-direction: column;
+  }
+  #tabular
+  {
+    width: 100%;
+    height:500px;
+    display:flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+  .columnaFlex
+  {
+    width: 50%;
+    height:500px;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:repeat(5,1fr);
+    grid-gap:3px;
+    text-align:center;  
+
+  }
+  #flexhijo1
+  {
+   
+    grid-template-areas: "gridA1"
+                         "gridA2"
+                         "gridA3"
+                         "gridA4"
+                         "gridA5";
+  }
+  #flexhijo2
+  {
+
+    grid-template-areas: "gridB1"
+                         "gridB2"
+                         "gridB3"
+                         "gridB4"
+                         "gridB5";
+  }
+#gridA1{grid-area:"gridA1";}
+#gridA2{grid-area:"gridA2";}
+#gridA3{grid-area:"gridA3";}
+#gridA4{grid-area:"gridA4";}
+#gridA5{grid-area:"gridA5";}
+
+#gridB1{grid-area:"gridB1"}
+#gridB2{grid-area:"gridB2"}  
+#gridB3{grid-area:"gridB3"}  
+#gridB4{grid-area:"gridB4"}
+#gridB5{grid-area:"gridB5"}  
+.filagrid{border:5px solid white;}
+
+#description{padding-top:50px; width: 90%; height:100px; z-index: -1;text-align:center;margin:auto;}
+
+#cajaprincipal4
+{
+  display:none;
+  width: 100%;
+  height: 600px;
+  flex-direction: row;
+}
+#cajaprincipal4 article
+{
+  display:flex;
+  width: 90%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.parrafos
+{
+  width: 100%;
+  padding:10px;
+  text-align: center;
+}
+#cajaprincipal4 button
+{
+  width: 5%; 
+}
+
