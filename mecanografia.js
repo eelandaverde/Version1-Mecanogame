@@ -10,7 +10,7 @@ let cajaprincipal3 = document.getElementById("cajaprincipal3");
 let h2=document.getElementsByClassName("tema");
 let teclas=document.getElementsByClassName("teclas");
 let pteclah2 = document.getElementById("pteclah2");
-let contador = 1; 
+let contador; 
 let start = document.getElementById("start");
 let cajaprincipal4 = document.getElementById("cajaprincipal4");
 let contadorPorPagina = 0;
@@ -555,7 +555,7 @@ start.addEventListener("click" , () => {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                SEGUNDA PARTE
 ////////////////////////////////////////////////////////////////////////////////////////////////////////7///
-descripcion2.addEventListener("click", function(){contador = 7;
+descripcion2.addEventListener("mousedown", ()=>{contador = 7;
     menu(contador);}); 
 
 
