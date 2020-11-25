@@ -91,10 +91,6 @@ let levelDeseado = 1;
 //pagina1
 
     descripcion1.addEventListener("click",()=>{
-    contador=1;
-    segundaPagina.style.display="block";
-    cajaprincipal1.style.display="none";
-    cajaprincipal3.style.display="none";
     contador=2;
     menu(contador);
 });
